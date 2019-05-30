@@ -2,7 +2,7 @@ public class Datum implements Comparable<Datum>{
     private int dan, mjesec, godina;
     private boolean jesuLiDatumiJednaki(Datum d1, Datum d2){
         //kod
-        return true; //ovo izbrisati pa svoje ubaciti
+        return false; //ovo izbrisati pa svoje ubaciti
     }
 
     private Datum(){
@@ -46,6 +46,6 @@ public class Datum implements Comparable<Datum>{
     @Override
     public int compareTo(Datum d){
         //kod
-        return 0; //ovo izbrisati pa svoje ubaciti
+        return 5; //ovo izbrisati pa svoje ubaciti
     }
 }

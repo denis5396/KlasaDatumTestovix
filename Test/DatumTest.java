@@ -17,12 +17,11 @@ class DatumTest {
     @Test
     void TestpomjeriZaJedanDanUnaprijed() {
         Datum d;
-        boolean ok = false;
+        boolean ok;
         try{
             d = new Datum(22,6,2000);
             d.pomjeriZaJedanDanUnaprijed();
-            d.compareTo(new Datum(23,6,2000));
-            ok = true;
+            ok = d.equals(new Datum(23,6,2000));
         }catch(Exception e){
             ok = false;
         }
@@ -32,12 +31,11 @@ class DatumTest {
     @Test
     void TestpomjeriZaJedanDanUnaprijed1() {
         Datum d;
-        boolean ok = false;
+        boolean ok;
         try{
             d = new Datum(30,6,2000);
             d.pomjeriZaJedanDanUnaprijed();
-            d.compareTo(new Datum(1,7,2000));
-            ok = true;
+            ok =  d.equals(new Datum(1,7,2000));
         }catch(Exception e){
             ok = false;
         }
@@ -47,12 +45,11 @@ class DatumTest {
     @Test
     void TestpomjeriZaJedanDanUnaprijed2() {
         Datum d;
-        boolean ok = false;
+        boolean ok;
         try{
             d = new Datum(31,12,2000);
             d.pomjeriZaJedanDanUnaprijed();
-            d.compareTo(new Datum(1,1,2001));
-            ok = true;
+            ok =  d.equals(new Datum(1,1,2001));
         }catch(Exception e){
             ok = false;
         }
@@ -66,8 +63,8 @@ class DatumTest {
         try{
             d = new Datum(28,2,2000);
             d.pomjeriZaJedanDanUnaprijed();
-            d.compareTo(new Datum(29,2,2001));
-            ok = true;
+            ok = d.equals(new Datum(29,2,2001));
+
         }catch(Exception e){
             ok = false;
         }
@@ -81,8 +78,7 @@ class DatumTest {
         try{
             d = new Datum(28,2,2000);
             d.pomjeriZaJedanDanUnazad();
-            d.compareTo(new Datum(27,2,2000));
-            ok = true;
+            ok = d.equals(new Datum(27,2,2000));
         }catch(Exception e){
             ok = false;
         }
@@ -96,8 +92,7 @@ class DatumTest {
         try{
             d = new Datum(1,3,2000);
             d.pomjeriZaJedanDanUnazad();
-            d.compareTo(new Datum(29,2,2000));
-            ok = true;
+            d.equals(new Datum(29,2,2000));
         }catch(Exception e){
             ok = false;
         }
@@ -111,8 +106,7 @@ class DatumTest {
         try{
             d = new Datum(1,3,2001);
             d.pomjeriZaJedanDanUnazad();
-            d.compareTo(new Datum(28,2,2001));
-            ok = true;
+            ok = d.equals(new Datum(28,2,2001));
         }catch(Exception e){
             ok = false;
         }
